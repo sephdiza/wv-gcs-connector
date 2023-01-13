@@ -3,9 +3,12 @@ module github.com/wizyvision/gcs-connector/cmd/trigger-function
 go 1.17
 
 require (
+	cloud.google.com/go/compute/metadata v0.2.3
+	cloud.google.com/go/logging v1.6.1
 	github.com/GoogleCloudPlatform/functions-framework-go v1.6.1
 	github.com/cloudevents/sdk-go/v2 v2.12.0
 	github.com/slack-go/slack v0.11.4
+	github.com/wizyvision/gcs-connector/pkg/logger v0.0.0-00010101000000-000000000000
 )
 
 require (
@@ -38,8 +41,6 @@ require (
 	google.golang.org/protobuf v1.28.1 // indirect
 )
 
-require (
-	cloud.google.com/go/compute v1.15.0 // indirect
-	cloud.google.com/go/compute/metadata v0.2.1
-	cloud.google.com/go/logging v1.6.1
-)
+require cloud.google.com/go/compute v1.15.0 // indirect
+
+replace github.com/wizyvision/gcs-connector/pkg/logger v0.0.0-00010101000000-000000000000 => ../../pkg/logger
